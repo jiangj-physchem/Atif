@@ -1,0 +1,72 @@
+/*************This input file is for the system parameters*************/
+/***Set method: DFT or PB; Set geometry: Planar,Spherical,Cylindrical**/
+/**********Set the type of screening parameter: Bulk or Local**********/
+/******Set charge shell: 0<=b<=a<=1 which is for the charge model******/
+METHOD:
+DFT; Planar; Bulk; 1.0; 0.0
+=======================================================================
+/*Set the polymers. monomer concentration of polymer 1: rhopm1, polymer-
+ization: mp1; # of blocks: nb1;Chain Model; Bending potential; Polymer 2 */
+POLYMER:
+0.0; 40; 1; flexible; 0; 0.0; 50; 1; Semi-flexible; 0
+=======================================================================
+/*Set the sequence. The 1st line: polymerization of each blocks:mb1[i];
+The 2nd line: polymerization of each blocks:mb2[i]; The 3rd line: the
+valency of each blocks: z1[i]; the 4th line: z2[i]*/
+SEQUENCE:
+40
+40
+-1
+-1
+=======================================================================
+/*The separation of the slit pore and the step length: unit [diameter]*/
+SIZE:
+20; 0.0005
+=======================================================================
+/*Set the salt concentration: Molar and total volume fraction: 0.74*/
+SALT_HS:
+1.0; 0.74
+=======================================================================
+/*interaction with the wall. surface density:sigma(C/m^2). short range
+interaction: u_W1A; u_W1B; ...; u_W2A; u_W2B; ...; u_WS1(posi);u_WS2(negat); 
+u_WCounter1(posi); u_WCounter2(negat); hard sphere*/
+WALL:
+0.06; -0.0; -0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+=======================================================================
+/*Set pairwise interaction (kBT): p1A; p1B;...; p2A; p2B;...; s_posi; 
+s_negat; countertops; counter_neg*/
+ENERGY:
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+=======================================================================
+/*Set valency. (Zsalt_pos:Zsalt-neg); (ZCouterion_pos:ZCouterion_neg)*/
+VALENCY:
+2 : -1; 1 : -1
+=======================================================================
+/*Set diameter (unit: diameter). Dp1A; Dp1B;...; Dp2A; Dp2B;...;Dsalt_pos
+;Dsalt-neg;Dcounter_posi; Dcounter_neg; hard sphere*/
+DIAMETER:
+0.4; 0.4; 0.15; 0.3; 0.4; 0.4; 0.4; 0.4; 0.4
+=======================================================================
+/*Set dielectric constant: permiS (for solution); permiW (for surfaces);
+temperature (T: Kelvin); unit*/
+PERMITEMLEN:
+78.5; 78.5; 298.15; 1.0E-9
+=======================================================================
+/*Set iterative parameters. maxItera: maximum steps;mixCoe: picard mixture 
+coefficient; cstep: Charging step; phL_L: Guess surface potential;errTol:
+Error tolerance*/ 
+ITERATIVE:
+1E5; 0.001; 1; 0.0; 1.0E-7
+=======================================================================
+/*Set the path of the output file */
+FILEPATH:
+output/
+=======================================================================
