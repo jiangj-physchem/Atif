@@ -21,6 +21,8 @@ the flexible polymer is modeled by freely jointed chain model; and the semiflexi
 II, density functional theory
 the flexible polymer is modeled by freely jointed chain model; and the semiflexible polymer is modeled using discrete worm-like chain model; the excluded volume effect is involved using modified fundamental measure theory; the electrostatic potential is obtained using truncated shell model; the electrostatic correlations are involved using a functional mean spherical approximation; the non-bonded chain connectivtiy contirbutions are considered using thermodynamic perturbation theory.
 
+# Want to thank the developer?
+If you think Atif really help you during your research career, please feel free to thank the developer in the "Acknowledge" section in your publications. If you would like to put the developer in the author list of your publications, please directly contact [the developer](https://github.com/jiangj-physchem).
 
 # Contributing
 
