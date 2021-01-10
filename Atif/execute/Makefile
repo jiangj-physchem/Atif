@@ -9,7 +9,7 @@ SRC=$(CPP_FILES)
 OBJ=$(SRC:.cpp=.o)
 #EXECUTABLE=exe
 
-TARGET=PolymerDFT
+TARGET=ATIFexe
 
 defaut: $(TARGET)
 	-rm $(OBJ)
