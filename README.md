@@ -1,4 +1,4 @@
-# Atif
+## Atif
 Atif is an advanced theoretical tool for inhomogenous fluids. Atif can be used to study many kinds of fluids near an interface:
 * hard sphere fluids with size symmetry/asymmetry 
 * electrolytes including size symmetry/asymmetry and monovalent/multivalent ions
@@ -9,7 +9,7 @@ Currently, this theoretical tool is only for open systems (Grand-canonical ensem
 
 In the future, we would also like to involve **spherical** and **cylindrical interfaces**.
 
-# The theories we used in this tool (I will cite the corresponding references subsequently)
+## The theories we used in this tool
 
 **I, self-consistent field theory** 
 * the flexible polymer is modeled by freely jointed chain model
@@ -25,13 +25,15 @@ In the future, we would also like to involve **spherical** and **cylindrical int
 * the electrostatic correlations are involved using a functional mean spherical approximation (MSA)
 * the non-bonded chain connectivtiy contirbutions are considered using thermodynamic perturbation theory (TPT)
 
-# Want to thank the developer?
+I will cite the corresponding references subsequently.
+
+## Want to thank the developer?
 If you think Atif really help you during your research career, please feel free to thank the developer in the "Acknowledge" section in your publications. If you would like to put the developer in the author list of your publications, please directly contact [the developer](https://github.com/jiangj-physchem).
 
-# Contributing
+## Contributing
 
 Currently, we have not set up the rules for submitting pull requests. Please directly contact [the developer](https://github.com/jiangj-physchem) if you would like to contribute.
 
-# License
+## License
 
 Atif is licensed under the [MIT License](LICENSE.md).
