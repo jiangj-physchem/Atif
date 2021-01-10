@@ -22,3 +22,8 @@ cp PolymerDFT your_path_to_atif/Atif/input/
 cd your_path_to_atif/Atif/input/
 nohup ./PolymerDFT &
 ```
+You will find the output files in the folder as shown in the last line of the [input file]('Atif/input/input.dat'). If this folder doesn't exit, please create it:
+```
+cd your_path_to_atif/Atif/
+mkdir output
+```
