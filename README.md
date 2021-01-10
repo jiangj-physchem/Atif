@@ -5,7 +5,7 @@ Atif is **an advanced theoretical tool for inhomogeneous fluids**. Atif can be u
 * flexible and semiflexible uncharged/charged polymers (polyelectrolytes)
 * block uncharged/charged polymers and sequential uncharged/charged polymers
 
-Currently, this theoretical tool is only for open systems (Grand-canonical ensemble). Howerver, it is very easy to make use of this tool to study issues in a closed system (canonical ensemble) with little changes (please directly contact [the developer](https://github.com/jiangj-physchem) if necessary). In addition, the current version can only study the inhomogeneous properties near a **planar surface**. 
+Currently, this theoretical tool is only for open systems (Grand-canonical ensemble). Howerver, it is very easy to make use of this tool to study issues in a closed system (canonical ensemble) with little changes (please directly contact [the developer](https://github.com/jiangj-physchem) if necessary). In addition, this current version can be only used to study the inhomogeneous properties near a **planar surface**. 
 
 In the future, we would also like to involve **spherical** and **cylindrical interfaces**.
 
