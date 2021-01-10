@@ -1,5 +1,5 @@
 ## Atif
-Atif is an advanced theoretical tool for inhomogenous fluids. Atif can be used to study many kinds of fluids near an interface:
+Atif is an advanced theoretical tool for inhomogeneous fluids. Atif can be used to study many kinds of fluids near an interface:
 * hard sphere fluids with size symmetry/asymmetry 
 * electrolytes including size symmetry/asymmetry and monovalent/multivalent ions
 * flexible and semiflexible uncharged/charged polymers (polyelectrolytes)
@@ -28,7 +28,7 @@ In the future, we would also like to involve **spherical** and **cylindrical int
 I will cite the corresponding references subsequently.
 
 ## How to use Atif?
-Before you enjoy in **Atif**, please read the **GETTINGSART.md** file 
+Before you enjoy in **Atif**, please read the [GETTINGSART.md](GETTINGSART.md) file 
 
 ## Want to thank the developer?
 If you think Atif really help you during your research career, please feel free to thank the developer in the "Acknowledge" section in your publications. If you would like to put the developer in the author list of your publications, please directly contact [the developer](https://github.com/jiangj-physchem).
