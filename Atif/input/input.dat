@@ -1,5 +1,5 @@
 /*************This input file is for the system parameters*************/
-/***Set method: DFT or PB; Set geometry: Planar,Spherical,Cylindrical**/
+/***Set method: DFT or SCFT; Set geometry: Planar,Spherical,Cylindrical**/
 /**********Set the type of screening parameter: Bulk or Local**********/
 /******Set charge shell: 0<=b<=a<=1 which is for the charge model******/
 METHOD:
