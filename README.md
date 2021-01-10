@@ -15,11 +15,11 @@ In the future, we would also like to involve **spherical** and **cylindrical int
 * the flexible polymer is modeled by freely jointed chain model
 * the semiflexible polymer is modeled using discrete worm-like chain model
 * the excluded volume effect is treated using local incompressible condition
-* the electrosatic potenital is obtained using point charge model.
+* the electrosatic potenital is obtained using point charge model
 
 **II. density functional theory (DFT)**
 * the flexible polymer is modeled by freely jointed chain model
-* the semiflexible polymer is modeled using discrete worm-like chain model;
+* the semiflexible polymer is modeled using discrete worm-like chain model
 * the excluded volume effect is involved using modified fundamental measure theory (MFMT)
 * the electrostatic potential is obtained using truncated shell model (TSM)
 * the electrostatic correlations are involved using a functional mean spherical approximation (MSA)
