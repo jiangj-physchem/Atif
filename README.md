@@ -11,17 +11,17 @@ In the future, we would also like to involve **spherical** and **cylindrical int
 
 ## The theories we used in this tool
 
-**I, self-consistent field theory** 
+**I. self-consistent field theory (SCFT)** 
 * the flexible polymer is modeled by freely jointed chain model
 * the semiflexible polymer is modeled using discrete worm-like chain model
 * the excluded volume effect is treated using local incompressible condition
 * the electrosatic potenital is obtained using point charge model.
 
-**II, density functional theory**
+**II. density functional theory (DFT)**
 * the flexible polymer is modeled by freely jointed chain model
 * the semiflexible polymer is modeled using discrete worm-like chain model;
-* the excluded volume effect is involved using modified fundamental measure theory
-* the electrostatic potential is obtained using truncated shell model
+* the excluded volume effect is involved using modified fundamental measure theory (MFMT)
+* the electrostatic potential is obtained using truncated shell model (TSM)
 * the electrostatic correlations are involved using a functional mean spherical approximation (MSA)
 * the non-bonded chain connectivtiy contirbutions are considered using thermodynamic perturbation theory (TPT)
 
