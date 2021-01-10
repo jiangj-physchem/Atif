@@ -16,7 +16,7 @@ Download the entire [Atif](Atif) directory to your local path `your_path_to_atif
 cd your_path_to_atif/Atif/execute/
 make
 ```
-Then you will get an executable file named **PolymerDFT** in the folder 'your_path_to_atif/Atif/execute/'. You need to copy this executable file into the same folder with the **input** file. Then you are ready to start your project!
+Then you will get an executable file named **PolymerDFT** in the folder `your_path_to_atif/Atif/execute/`. You need to copy this executable file into the same folder with the **input** file. Then you are ready to start your project!
 ```
 cp PolymerDFT your_path_to_atif/Atif/input/
 cd your_path_to_atif/Atif/input/
