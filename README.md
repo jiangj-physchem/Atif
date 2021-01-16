@@ -1,5 +1,5 @@
 ## Atif
-Atif is **an advanced theoretical tool for inhomogeneous fluids**. Atif can be used to study many kinds of fluids near an dielectric interface (**allow dielectric constant discontinuity**):
+Atif is **an advanced theoretical tool for inhomogeneous fluids**. Atif can be used to study many kinds of fluids near a dielectric interface (**allow dielectric constant discontinuity**):
 * hard sphere fluids with size symmetry/asymmetry 
 * electrolytes including size symmetry/asymmetry and monovalent/multivalent ions
 * flexible and semiflexible uncharged/charged polymers (polyelectrolytes)
