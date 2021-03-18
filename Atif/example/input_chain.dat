@@ -1,0 +1,82 @@
+/Users/jiangj/Atif/example/input_chain.dat
+===================================================================================
+/***********The first line above is the absolute path of this input file**********/
+===================================================================================
+/***************This input file is for the parameters of the system **************/
+===================================================================================
+/*Set method: DFT or SCFT; Set geometry: Planar,Spherical, or Cylindrical; Set number
+of surfaces: "Single" means one surface, "Two" means two surfaces; Set the model of  
+non-electrostatic external potential: "LJ" means Lenard-Jones, "SW" means Square-well 
+potential; Set charge shell model: 0<=b<=a<=1 which is for the charge model*******/
+METHOD:
+SCFT; Planar; Single; LJ; 1.0; 0.0
+===================================================================================
+/****Set the polymers. Polymer 1: monomer concentration: rhopm1; polymerzation: mp1; 
+# of blocks: nb1; Chain Model; Bending potential; Polymer 2: monomer concentration: 
+rhopm1; polymerization: mp1; # of blocks: nb1; Chain Model; Bending potential ****/
+POLYMER:
+0.01; 40; 1; flexible; 0; 0.0; 50; 1; Semi-flexible; 0
+===================================================================================
+/*Set the sequence. The 1st line: polymerization of each blocks of polymer 1 : mb1[i]
+; The 2nd line: polymerization of each blocks of polymer 2: mb2[i]; The 3rd line: the
+valency of each blocks of polymer 1: z1[i]; the 4th line: the valency of each blocks 
+of polymer 2: z2[i]*********/
+SEQUENCE:
+40
+40
+-1
+-1
+===================================================================================
+/***************The box size and the step length: unit [see below]****************/
+SIZE:
+20; 0.01
+===================================================================================
+/*******Set the salt concentration: Molar and total volume fraction: 0.74 (only for
+incompressible system)********/
+SALT_HS:
+0.0; 0.74
+===================================================================================
+/Interaction with wall. Surface charge density: sigma(C/m^2). Short-range interaction
+: u_W1A; u_W1B; ...; u_W2A; u_W2B; ...; u_WS1(positive salt); u_WS2(negative salt); 
+u_WCounter1(positive counterion); u_WCounter2(negative counterion); hard sphere****/
+WALL:
+0.01; -0.0; -0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+===================================================================================
+/*******Set pairwise interaction (kBT): p1A; p1B; ...; p2A; p2B;...; positive salt; 
+negative salt; positive counterion; negative counterion********/
+ENERGY:
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0
+===================================================================================
+/*****Set valency. (Positive salt : Negative salt); (Positive counterion : Negative
+counterion)******/
+VALENCY:
+2 : -1; 1 : -1
+===================================================================================
+/*Set diameters (unit: see below). Dp1A; Dp1B; ...; Dp2A; Dp2B; ...; Dsalt-positive; 
+Dsalt-negative; Dcounterion-positive; Dcounterion-negative; hard sphere***********/
+DIAMETER:
+0.4; 0.4; 0.4; 0.4; 0.4; 0.4; 0.4; 0.4; 0.4
+===================================================================================
+/****Set dielectric constant: permiS (for solution); permiW (for surfaces); Set the
+temperature (T: Kelvin); and the unit*******/
+PERMITEMLEN:
+78.5; 78.5; 298.15; 1.0E-9
+===================================================================================
+/***Set iterative parameters. maxItera: maximum number of iteration; mixCoe: Picard
+mixture coefficient; cstep: Charging step; phL_L: Guess surface potential; errTol:
+Error tolerance******/ 
+ITERATIVE:
+1E5; 0.001; 1; 0.0; 1.0E-7
+===================================================================================
+/**********************Set the path of the output file ***************************/
+FILEPATH:
+/Users/jiangj/Atif/output/chain/
+===================================================================================
