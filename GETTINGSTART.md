@@ -18,6 +18,6 @@ make
 ```
 Then you will get an executable file named **ATIFexe** in the folder `/Users/jiangj/Atif/cmake/`. Now you are ready to start your project!
 ```
-nohup ./ATIFexe < /Users/jiangj/Atif/example/input_chain.dat &
+echo "/Users/jiangj/Atif/example/input_chain.dat" | nohup ./ATIFexe &
 ```
 You will find the output files in the folder as shown in the last line of the [input file](Atif//example/input_chain.dat).
