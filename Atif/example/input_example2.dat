@@ -1,0 +1,63 @@
+===================================================================================
+/**************The lines below are for the parameters of the system **************/
+===================================================================================
+/***Method: DFT/SCFT; geometry: Planar/Spherical/Cylindrical; # of surface: Single/
+Two; the model of short-range external potential: LJ(Lenard-Jones)/SW(Square-well) 
+potential; Charge shell model: 0<=B<=A<=1 (B&A: parameters in charge shell model)*/
+METHOD:
+DFT; Planar; Single; SW; 1.0, 0.0
+===================================================================================
+/****Polymer. Polymer 1(poly-1): monomer concentration [M]: rhopm1, polymerization: 
+mp1, # of blocks: nb1, Chain Model, Bending potential; Poly-2: similar with poly-1/
+POLYMER:
+0.1, 40, 8, Semi-flexible, 10; 0.0, 0, 0, Flexible, 0
+===================================================================================
+/*Sequence. 1st line: monomer # of each block of poly-1: mb1[]; 2nd line for poly-2
+: mb2[]; 3rd line: valency of each block of poly-1: z1[]; 4th line for poly-2: z2[]/
+SEQUENCE:
+5; 5; 5; 5; 5; 5; 5; 5
+0
+-1; 0; -1; 0; -1; 0; -1; 0
+0
+===================================================================================
+/***************The box size and the step length: unit [see below]****************/
+SIZE:
+20; 0.02
+===================================================================================
+/***Salt concentration [M] and total volume fraction (for incompressible system)**/
+SALT_HS:
+0.0; 0.74
+===================================================================================
+/*External potential. Surface charge density: (C/m^2). Short-range force: monomers, 
+positive salt, negative salt, positive counterion, negative counterion, solvent***/
+WALL:
+0.02; 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+===================================================================================
+/**Set pairwise interaction (kBT): monomers; positive salt; negative salt; positive 
+counterions; negative counterions*****/
+ENERGY:
+0.0; 0.0
+0.0; 0.0
+===================================================================================
+/*****Set valency. Salt(positive : negative); counterion(positive : negative)*****/
+VALENCY:
+1 : -1; 1 : -1
+===================================================================================
+/**********Set diameters (unit: see below). Monomers; positive salt; negative salt; 
+positive counterion; negative counterion; hard sphere solvent********************/
+DIAMETER:
+1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0; 1.0
+===================================================================================
+/*Dielectric constant: solution, surfaces; temperature (K); length unit of system**/
+PERMITEMLEN:
+78.5, 78.5; 298.15; 4.0E-10
+===================================================================================
+/******Iterative parameters. maximum iteration #: maxItera; Picard mixture: mixCoe; 
+Charging step: cstep; Guess surface potential: phL_L; Error tolerance: errTol*****/ 
+ITERATIVE:
+1E5; 0.001; 1; 0.0; 1.0E-7
+===================================================================================
+/**********************Set the path for the output file ***************************/
+FILEPATH:
+~/Atif/output/example2/DFT/
+===================================================================================
