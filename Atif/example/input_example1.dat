@@ -26,12 +26,12 @@ SIZE:
 ===================================================================================
 /***Salt concentration [M] and total volume fraction (for incompressible system)**/
 SALT_HS:
-1.0; 0.74
+0.1; 0.74
 ===================================================================================
 /*External potential. Surface charge density: (C/m^2). Short-range force: monomers, 
 positive salt, negative salt, positive counterion, negative counterion, solvent***/
 WALL:
-0.0; 0.0, 0.0, 0.0, 0.0, 0.0
+0.06; 0.0, 0.0, 0.0, 0.0, 0.0
 ===================================================================================
 /**Set pairwise interaction (kBT): monomers; positive salt; negative salt; positive 
 counterions; negative counterions*****/
