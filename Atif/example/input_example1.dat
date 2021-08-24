@@ -22,7 +22,7 @@ SEQUENCE:
 ===================================================================================
 /***************The box size and the step length: unit [see below]****************/
 SIZE:
-40; 0.0005
+40; 0.01
 ===================================================================================
 /***Salt concentration [M] and total volume fraction (for incompressible system)**/
 SALT_HS:
@@ -46,11 +46,11 @@ VALENCY:
 /**********Set diameters (unit: see below). Monomers; positive salt; negative salt; 
 positive counterion; negative counterion; hard sphere solvent********************/
 DIAMETER:
-0.6; 0.3; 0.3; 0.3; 0.3
+2; 1; 1; 1; 1
 ===================================================================================
 /*Dielectric constant: solution, surfaces; temperature (K); length unit of system**/
 PERMITEMLEN:
-78.5, 78.5; 298.15; 1.0E-9
+78.5, 78.5; 298.15; 3.0E-10
 ===================================================================================
 /******Iterative parameters. maximum iteration #: maxItera; Picard mixture: mixCoe; 
 Charging step: cstep; Guess surface potential: phL_L; Error tolerance: errTol*****/ 
