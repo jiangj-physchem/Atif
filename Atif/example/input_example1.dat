@@ -22,7 +22,7 @@ SEQUENCE:
 ===================================================================================
 /***************The box size and the step length: unit [see below]****************/
 SIZE:
-40; 0.01
+30; 0.01
 ===================================================================================
 /***Salt concentration [M] and total volume fraction (for incompressible system)**/
 SALT_HS:
@@ -31,7 +31,7 @@ SALT_HS:
 /*External potential. Surface charge density: (C/m^2). Short-range force: monomers, 
 positive salt, negative salt, positive counterion, negative counterion, solvent***/
 WALL:
-0.06; 0.0, 0.0, 0.0, 0.0, 0.0
+0.0; 0.0, 0.0, 0.0, 0.0, 0.0
 ===================================================================================
 /**Set pairwise interaction (kBT): monomers; positive salt; negative salt; positive 
 counterions; negative counterions*****/
