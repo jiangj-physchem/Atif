@@ -709,7 +709,7 @@ int main()
         parameters_s<<"   "<<endl;
         parameters_s<<"-----------------------------------  parameters for salts  ------------------------------------------"<<endl;
         parameters_s<<"salt concentrations: "<<(rhoB1[nblocks1]+rhoB1[nblocks1+1])<<" [1/unit^3] or "
-                    <<(coe3*rhoB1[nblocks1]/species[nblocks1+1].Z)<<" [M];  Valencies: "<<species[nblocks1].Z
+                    <<(-coe3*rhoB1[nblocks1]/species[nblocks1+1].Z)<<" [M];  Valencies: "<<species[nblocks1].Z
                     <<"  :  "<<species[nblocks1+1].Z<<endl;
     }
     if(neutsys==1)
