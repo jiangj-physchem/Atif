@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: show current pwd
+      run: pwd
+
     - name: cmake generate
       run: mkdir D:\\a\\Atif\\Atif\\build && cd D:\\a\\Atif\\Atif\\build && cmake ../src/cmake
     
