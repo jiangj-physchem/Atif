@@ -5,7 +5,7 @@
 
 extern double dr;
 extern double BJ;
-extern double size;
+extern double g_size;
 extern int ngrid_m; //the number of grids: the middle between two surfaces
 extern int LLIM; //the minimum lower limit of intergral
 extern short nspecies;
@@ -34,7 +34,7 @@ void ImageChargePotential(double f,float* Z,double** rho,double* u_im)
         
         R = dr*i;
         
-        kxD0  = exp(kapax*size);
+        kxD0  = exp(kapax*g_size);
         kxD1  = 1.0/kxD0;
         kxX1  = exp(2.0*kapax*R);
         kxX0  = 1.0/kxX1;
@@ -43,7 +43,7 @@ void ImageChargePotential(double f,float* Z,double** rho,double* u_im)
         fm  = f;
         expm= kxD1;
         
-        u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(size-R));
+        u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(g_size-R));
         
         
         k   = 2;
@@ -54,11 +54,11 @@ void ImageChargePotential(double f,float* Z,double** rho,double* u_im)
             
             if(k%2 ==0)
             {
-                u_im[i] = u_im0 + fm*expm/(k*size);
+                u_im[i] = u_im0 + fm*expm/(k*g_size);
             }
             else
             {
-                u_im[i] = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*size+2*R) + kxX1*kxD1/((k+1)*size-2*R));
+                u_im[i] = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*g_size+2*R) + kxX1*kxD1/((k+1)*g_size-2*R));
             }
             
             if(fabs(u_im[i]-u_im0) < errIm) break;
@@ -89,7 +89,7 @@ void ImageChargePotential(int i,double f,double lamadaKJ,double& u_im)
     
     R = dr*i;
     
-    kxD0  = exp(size/lamadaKJ);
+    kxD0  = exp(g_size/lamadaKJ);
     kxD1  = 1.0/kxD0;
     kxX1  = exp(2.0*R/lamadaKJ);
     kxX0  = 1.0/kxX1;
@@ -98,7 +98,7 @@ void ImageChargePotential(int i,double f,double lamadaKJ,double& u_im)
     fm  = f;
     expm= kxD1;
     
-    u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(size-R));
+    u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(g_size-R));
     
     
     k   = 2;
@@ -109,11 +109,11 @@ void ImageChargePotential(int i,double f,double lamadaKJ,double& u_im)
         
         if(k%2 ==0)
         {
-            u_im = u_im0 + fm*expm/(k*size);
+            u_im = u_im0 + fm*expm/(k*g_size);
         }
         else
         {
-            u_im = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*size+2*R) + kxX1*kxD1/((k+1)*size-2*R));
+            u_im = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*g_size+2*R) + kxX1*kxD1/((k+1)*g_size-2*R));
         }
         
         if(fabs(u_im-u_im0) < errIm) break;

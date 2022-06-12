@@ -5,7 +5,7 @@
 
 extern double dr;
 extern double BJ;
-extern double size;
+extern double g_size;
 extern short  nspecies;
 
 void ImageChargeEnergy(int i,double f,float* Z,double** rho,double& f_im)
@@ -99,7 +99,7 @@ void FunctionJ(int i,double f,double alpkapa,double& jka)
     
     R = dr*i;
     
-    kxD0  = exp(alpkapa*size);
+    kxD0  = exp(alpkapa*g_size);
     kxD1  = 1.0/kxD0;
     kxX1  = exp(2.0*alpkapa*R);
     kxX0  = 1.0/kxX1;
@@ -108,7 +108,7 @@ void FunctionJ(int i,double f,double alpkapa,double& jka)
     fm  = f;
     expm= kxD1;
     
-    u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(size-R));
+    u_im0 = fm*(0.5*kxX0/R + 0.5*kxX1*expm*kxD1/(g_size-R));
     
     
     k   = 2;
@@ -119,11 +119,11 @@ void FunctionJ(int i,double f,double alpkapa,double& jka)
         
         if(k%2 ==0)
         {
-            jka = u_im0 + fm*expm/(k*size);
+            jka = u_im0 + fm*expm/(k*g_size);
         }
         else
         {
-            jka = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*size+2*R) + kxX1*kxD1/((k+1)*size-2*R));
+            jka = u_im0 + 0.5*fm*expm*(kxX0*kxD0/((k-1)*g_size+2*R) + kxX1*kxD1/((k+1)*g_size-2*R));
         }
         
         if(fabs(jka-u_im0) < errIm) break;

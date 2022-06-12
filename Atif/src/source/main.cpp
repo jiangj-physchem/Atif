@@ -19,7 +19,7 @@ double BJ;     //the Bjerrum length
 double kapa;   //the inverse of Deby length
 double boundary;
 double dr;     //step length of the discretization
-double size;   //the size of the simulation box
+double g_size;   //the g_size of the simulation box
 double depthW;
 double C_psi;
 short  nspecies;
@@ -534,13 +534,13 @@ int main()
         ngrid_m = 5*NRe;
         ngrid_b = 4*NRe;
         ngridm1 = ngrid_m + 1;
-        size    = ngrid*dr;
+        g_size    = ngrid*dr;
         ///////////////////set the simulation box/////////////////////////
     }
     else if(MethG[2] == "two")
     {
-        size    = size0;
-        ngrid   = round(size/dr);
+        g_size    = size0;
+        ngrid   = round(g_size/dr);
         ngrid_m = ngrid/2;
         ngrid_b = ngrid_m;
         ngridm1 = ngrid_m + 1;
@@ -584,7 +584,7 @@ int main()
         rho1[i]= new double[ngrid+1]();
         rho_temp1[i] = new double[ngrid_m+1]();
         rho_temp2[i] = new double[ngrid_m+1]();
-        ULI[i] = round((size-D[i]*0.5)/dr);
+        ULI[i] = round((g_size-D[i]*0.5)/dr);
     }
     ULIM = ULI[0];
     for(short i=1; i<nspecies; ++i)
@@ -604,8 +604,8 @@ int main()
     {
         depthLR[0][i] = round(D[i]*0.5/dr);
         depthLR[1][i] = round(D[i]*alpha/dr);
-        depthLR[2][i] = round((size-D[i]*0.5)/dr);
-        depthLR[3][i] = round((size-D[i]*alpha)/dr);
+        depthLR[2][i] = round((g_size-D[i]*0.5)/dr);
+        depthLR[3][i] = round((g_size-D[i]*alpha)/dr);
     }
     //External potential
     if(MethG[3] == "sw")
@@ -689,7 +689,7 @@ int main()
     parameters_s<<"------------------------------------  system parameters  --------------------------------------------"<<endl;
     parameters_s<<"  "<<endl;
     parameters_s<<"------------------------------  parameters for simulation box  --------------------------------------"<<endl;
-    parameters_s<<"number of surfaces: "<<MethG[2]<<";  size of box: "<<size<<" [unit];  unit: "<<lunit<<" [m]"<<endl;
+    parameters_s<<"number of surfaces: "<<MethG[2]<<";  g_size of box: "<<g_size<<" [unit];  unit: "<<lunit<<" [m]"<<endl;
     if(rhoBM1 > 1E-10)
     {
         parameters_s<<"   "<<endl;
@@ -987,7 +987,7 @@ int main()
         if(err > errTol0)
         {
             iter = 0;
-            converge_rec<<"fail to get convergence result:  size= "<<size<<" err= "<<err<<endl;
+            converge_rec<<"fail to get convergence result:  g_size= "<<g_size<<" err= "<<err<<endl;
 
             FileOutPut(i_num,lunit,coe3,rhoB,rho,Psi,filePath); //i_num
             FileOutPut(sigma_t0,dcharge,cstep,iCode,0,i_num+1,Z,rho,fileILoop,fileTemp);
@@ -1008,7 +1008,7 @@ int main()
                     
                 if(MethG[0] == "dft") EnergyCalculation(sigma,gama,f,LLI,ULI,D,Z,rhoB,TB,pairEner,ATT,rho,Psi,Psi_IJ,Ener_tot);
                 
-                vari_press<<size<<" "<<sigma<<" "<<Ener_tot<<endl;
+                vari_press<<g_size<<" "<<sigma<<" "<<Ener_tot<<endl;
             }
             
         }
