@@ -13,8 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: make
-      run: cd Atif/src/cmake && make -f win.Makefile
+
+    - name: cmake generate
+      run: mkdir D:\\a\\Atif\\build && cd D:\\a\\Atif\\build && cmake ../src/cmake
+    
+    - name: cmake build
+      run: cd D:\\a\\Atif\\build && cmake --build . --config Release
+
+
+    - name: ls files
+      run: cd D:\\a\\Atif\\build && ls
 
     - uses: actions/upload-artifact@v3
       with:
