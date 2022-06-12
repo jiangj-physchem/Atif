@@ -1,0 +1,23 @@
+name: Ubuntu
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: make
+      run: cd Atif/src/cmake && make
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ubuntu
+        path: ./Atif/src/cmake/AtifExe

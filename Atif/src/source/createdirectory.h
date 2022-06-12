@@ -30,10 +30,17 @@ namespace createdirectory
             dir=s.substr(0,pos++);
             pre=pos;
             if(dir.size()==0) continue; // if leading / first time is 0 length
+            #if defined(WIN32)
+            if((mdret=::mkdir(dir.c_str())) && errno!=EEXIST) // && pos!=(s.size()-2)
+            {
+                return mdret;
+            }
+            #else
             if((mdret=::mkdir(dir.c_str(),mode)) && errno!=EEXIST) // && pos!=(s.size()-2)
             {
                 return mdret;
             }
+            #endif
             if((pos==s.size()) && errno==EEXIST) mdret = 0;
             
         }
