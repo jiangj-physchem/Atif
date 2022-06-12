@@ -1,0 +1,33 @@
+name: Windows
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: Windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: show current pwd
+      run: pwd
+
+    - name: cmake generate
+      run: mkdir D:\\a\\Atif\\Atif\\Atif\\build && cd D:\\a\\Atif\\Atif\\Atif\\build && pwd && cmake ../src/cmake
+    
+    - name: cmake build
+      run: cd D:\\a\\Atif\\Atif\\Atif\\build && cmake --build . --config Release
+
+
+    - name: ls files
+      run: cd D:\\a\\Atif\\Atif\\Atif\\build && ls
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Windows
+        path: D:\\a\\Atif\\Atif\\Atif\\build\\Release\\AtifExe.exe
